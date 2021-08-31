@@ -53,23 +53,23 @@
 // const result = sum(1, 30);
 // console.log(result);
 
-// let user = {
-//   firstName: "John",
-//   surName: "Smith",
-//   get fullName() {
-//     return this.firstName + " " + this.surName;
-//   },
-//   set fullName(name) {
-//     // const fullname = name.split(" ");
-//     // this.firstName = fullname[0];
-//     // this.surName = fullname[1];
-//     // Array destructuring
-//     [this.firstName, this.surName] = name.split(" ");
-//   },
-// };
-// // console.log(user.fullName);
-// user.fullName = "Harry Potter";
-// console.log(user.fullName);
+let user = {
+  firstName: "John",
+  surName: "Smith",
+  get fullName() {
+    return this.firstName + " " + this.surName;
+  },
+  set fullName(name) {
+    // const fullname = name.split(" ");
+    // this.firstName = fullname[0];
+    // this.surName = fullname[1];
+    // Array destructuring
+    [this.firstName, this.surName] = name.split(" ");
+  },
+};
+console.log(user.fullName);
+user.fullName = "Harry Potter";
+console.log(user.fullName);
 
 // Exercise:
 // Write the implementation of
@@ -85,28 +85,26 @@
 // function areaOfCircle(R, PI = 3.1416) {
 //   return PI * R * R;
 // }
+// const areaOfCircle = function (R, PI = 3.1416) {
+//   return PI * R * R;
+// };
+// const area = areaOfCircle(30);
 
-const areaOfCircle = function (R, PI = 3.1416) {
-  return PI * R * R;
-};
-const area = areaOfCircle(30);
+// const person = {
+//   name: "Harry Potter",
+//   occupation: "Magician",
+//   get description() {
+//     return "My name is " + this.name + " and I am a " + this.occupation;
+//   },
+//   set description(value) {
+//     [firstName, lastName, this.occupation] = value.split(" ");
+//     this.name = firstName + " " + lastName;
+//   },
+// };
 
-const person = {
-  name: "Harry Potter",
-  occupation: "Magician",
-  get description() {
-    return "My name is " + this.name + " and I am a " + this.occupation;
-  },
-  set description(value) {
-    const [firstName, lastName, occupation] = value.split(" ");
-    this.name = firstName + " " + lastName;
-    this.occupation = occupation;
-  },
-};
-
-console.log(person.description);
-person.description = "Elon Musk Scientist";
-console.log(person.description, person);
+// console.log(person.description);
+// person.description = "Elon Musk Scientist";
+// console.log(person.description, person);
 
 // person.description = "My name is Harry Potter and I am a Magician";
 // person.description = "My name is Mary Jane and I am a Girl";
